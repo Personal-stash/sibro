@@ -1,0 +1,9 @@
+# Hasil build Visual Studio
+bin/
+obj/
+packages/
+
+# Pengaturan lokal Visual Studio
+.vs/
+*.user
+*.suo

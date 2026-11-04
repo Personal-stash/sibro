@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C2A6F1E-3B4D-4E8A-9C11-5D2F8A6B0E41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIBRO</RootNamespace>
+    <AssemblyName>SIBRO</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\AyamRepository.cs" />
+    <Compile Include="Data\BaseRepository.cs" />
+    <Compile Include="Data\DashboardRepository.cs" />
+    <Compile Include="Data\DatabaseHelper.cs" />
+    <Compile Include="Data\KandangRepository.cs" />
+    <Compile Include="Data\MonitoringRepository.cs" />
+    <Compile Include="Data\PenyakitRepository.cs" />
+    <Compile Include="Forms\GridHelper.cs" />
+    <Compile Include="Models\Ayam.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\HasilDeteksi.cs" />
+    <Compile Include="Models\Kandang.cs" />
+    <Compile Include="Models\Monitoring.cs" />
+    <Compile Include="Models\Penyakit.cs" />
+    <Compile Include="Models\RekomendasiSuhu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IDeteksi.cs" />
+    <Compile Include="Services\LaporanService.cs" />
+    <Compile Include="Services\RekomendasiEngine.cs" />
+    <Compile Include="Services\RuleEngine.cs" />
+    <Compile Include="Services\StandarBerat.cs" />
+    <Compile Include="Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAyam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDeteksiPenyakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormInputMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormKandang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRekomendasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRiwayatDeteksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRiwayatMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAyam.Designer.cs">
+      <DependentUpon>FormAyam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDashboard.Designer.cs">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDeteksiPenyakit.Designer.cs">
+      <DependentUpon>FormDeteksiPenyakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInputMonitoring.Designer.cs">
+      <DependentUpon>FormInputMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormKandang.Designer.cs">
+      <DependentUpon>FormKandang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLaporan.Designer.cs">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRekomendasi.Designer.cs">
+      <DependentUpon>FormRekomendasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRiwayatDeteksi.Designer.cs">
+      <DependentUpon>FormRiwayatDeteksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRiwayatMonitoring.Designer.cs">
+      <DependentUpon>FormRiwayatMonitoring.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MySql.Data">
+      <Version>8.0.33</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
